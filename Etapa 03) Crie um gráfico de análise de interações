@@ -1,0 +1,12 @@
+Analise qual o perfil das interações ao longo das horas do dia através de uma gráfico de linhas. Este gráfico deverá mostrar quantos usuários estão ativos naquele horário, além de mostrar quantas vezes funcionalidades premium foram utilizadas e quantas avaliações positivas foram feitas.
+
+
+select 
+    hour(hour),
+    count (hour) as 'Usuários Logados',
+    sum(used_premium_feature) as 'Funcionalidades Premium Utilizadas',
+    sum(liked) as 'Avaliações positivas'
+from
+    interaction
+group by hour
+order by hour
