@@ -30,3 +30,29 @@ Para construir esses gráficos você deverá usar as tabelas:
 - Tax
 - Transactions
 - User
+
+
+
+Você usará somente as seguintes colunas:
+
+**TAX**
+
+- **Transaction_id** → identificador único de transação;
+- **Tax** → faturamento da empresa a cada transação;
+
+**TRANSACTION**
+
+- **Transaction_id** → identificador único de transação;
+- **Date** → data da transação
+
+**INTERACTION**
+
+- **Hour** → horário da atividade
+- **Used_premium_feature** → funcionalidades premium utilizadas
+- **Liked** → avaliações positivas
+
+**USER**
+
+- **Ios_user** → Usuários de IOS `(0: não é; 1: é usuário)`;
+- **Android_user** → Usuários de Android `(0: não é; 1: é usuário)`;
+- **Churn** → Usuário que deixou a plataforma `(0: não deixou a plataforma; 1: deixou a plataforma**)**`
