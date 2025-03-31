@@ -1,0 +1,19 @@
+Crie um gráfico de pizza mostrando a proporção de usuários Android em relação a usuários de IOS. Considere apenas os usuários ativos na plataforma, ou seja, aqueles que churn = 0. Você deverá usar as informações da tabela ‘User’.
+
+
+With Sistema as (
+    select 
+        case
+            when ios_user = 1 then 'Usuário de IOS'
+            when ios_user = 0 then 'Usuário de Android'
+        end as 'Sistema_Operacional'
+    from user
+    where churn = 0
+)
+
+select
+    Sistema_Operacional,
+    count(Sistema_Operacional)
+from    
+    Sistema
+group by Sistema_Operacional
