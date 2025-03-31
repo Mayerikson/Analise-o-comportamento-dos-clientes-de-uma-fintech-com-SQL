@@ -1,1 +1,12 @@
 O segundo gráfico deverá ser o gráfico de faturamento por dia da semana (entre os dias 23 e 29 de abril). 
+
+
+select 
+    DAY(DATE),
+    sum(tax)
+from
+    tax
+join transactions on tax.transaction_id = transactions.transaction_id
+WHERE DAY(DATE) between 23 and 29
+group by DAY(date)
+order by DAY(date)
