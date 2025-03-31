@@ -1,0 +1,13 @@
+
+## **Etapa 01) Construa o gráfico de Faturamento no Período**
+
+O primeiro gráfico deverá ser um gráfico que indica o faturamento que a empresa teve no período da semana 17. No modelo de negócio da Bankverse eles fatura a partir de uma taxa em cada transação realizada. Lembre-se de usar o gráfico de ‘meta’ para apresentar os dados, a meta da semana é de $400.000,00.
+
+
+
+select 
+    sum (tax)
+from
+    tax
+join transactions on tax.transaction_id = transactions.transaction_id
+WHERE DAY(DATE) between 23 and 29
